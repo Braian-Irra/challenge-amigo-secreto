@@ -6,6 +6,8 @@ function agregarAmigo(){
     if (nuevoAmigo === "") {
         alert("Por favor ingrese un nombre")
     }else {
-        alert("Amigo Agregado");
+        amigos.push(nuevoAmigo);
+        console.log(amigos); 
+        return nuevoAmigo;
     }
 }
