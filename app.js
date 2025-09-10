@@ -1,5 +1,11 @@
 let amigos = [];
 
+//funcion para vaciar la caja del input
+function limpiarCaja(){
+    document.querySelector("#amigo").value = '';
+}
+
+//funcion para agregar amigo
 function agregarAmigo(){
     let nuevoAmigo = document.querySelector("#amigo").value;
 
@@ -8,6 +14,7 @@ function agregarAmigo(){
     }else {
         amigos.push(nuevoAmigo);
         console.log(amigos); 
+        limpiarCaja();
         return nuevoAmigo;
     }
 }
