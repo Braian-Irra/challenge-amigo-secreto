@@ -17,18 +17,19 @@ function agregarAmigo(){
     let nuevoAmigo = document.querySelector("#amigo").value;
 
     if (nuevoAmigo === "") {
-        alert("Por favor ingrese un nombre")
-    }else {
-        amigos.push(nuevoAmigo);
-        console.log(amigos);
-        limpiarCaja();
-        return nuevoAmigo;
+        alert("Por favor ingrese un nombre");
+        return;
     }
+
+    amigos.push(nuevoAmigo);
+    console.log(amigos);
+    limpiarCaja();
+    return nuevoAmigo;
 }
 
 //funcion para actualizar la lista de amigos
 //recorre el array amigos y agrega cada nombre comom un elemento <li> dentro de la lista HTML
-function agregarAmigos(){
+function actualizarAmigos(){
     let lista = document.querySelector('#listaAmigos');
     lista.innerHTML = "";
 
