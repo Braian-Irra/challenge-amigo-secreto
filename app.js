@@ -41,13 +41,12 @@ function actualizarAmigos(){
 }
 
 function sortearAmigo(){
-    let numeroRandom = Math.floor(Math.random()*amigos.length);
 
-    console.log (numeroRandom);
     if (amigos.length == 0){
         alert("no hay amigos Para Sortear");
         return;
-    }else {
-        asignarTextoElemento('#resultado',`El amigo Sorteado es ${amigos[numeroRandom]}`);
     }
+    let numeroRandom = Math.floor(Math.random()*amigos.length);
+    console.log (numeroRandom);
+        asignarTextoElemento('#resultado',`El amigo Sorteado es ${amigos[numeroRandom]}`);
 }
