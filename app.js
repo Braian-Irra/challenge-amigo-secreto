@@ -1,5 +1,12 @@
 let amigos = [];
 
+
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+
 //funcion para vaciar la caja del input
 function limpiarCaja(){
     document.querySelector("#amigo").value = '';
@@ -29,5 +36,18 @@ function agregarAmigos(){
         let li = document.createElement("li");
         li.textContent = amigos[i];
         lista.appendChild(li);
+        asignarTextoElemento('#listaAmigos', amigos[i])
+    }
+}
+
+function sortearAmigo(){
+    let numeroRandom = Math.floor(Math.random()*amigos.length);
+
+    console.log (numeroRandom);
+    if (amigos.length == 0){
+        alert("no hay amigos");
+        return;
+    }else {
+        asignarTextoElemento('#resultado',`El amigo Sorteado es ${amigos[numeroRandom]}`);
     }
 }
