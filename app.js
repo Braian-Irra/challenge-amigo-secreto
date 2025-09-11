@@ -46,7 +46,8 @@ function sortearAmigo(){
         alert("no hay amigos Para Sortear");
         return;
     }
+    
     let numeroRandom = Math.floor(Math.random()*amigos.length);
     console.log (numeroRandom);
-        asignarTextoElemento('#resultado',`El amigo Sorteado es ${amigos[numeroRandom]}`);
+    asignarTextoElemento('#resultado',`El amigo Sorteado es ${amigos[numeroRandom]}`);
 }
